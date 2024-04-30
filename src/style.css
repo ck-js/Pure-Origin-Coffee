@@ -1,6 +1,8 @@
 :root {
     --primary-bg-color : white;
     --secondary-bg-color: #C0C0C0;
+    --small-mobile-spacing: 15px;
+    --regular-hero-font: hero-regular;
 }
 @font-face {
     font-family: 'hero-regular';
@@ -17,6 +19,7 @@
 
 @media (max-width: 767px) {
 body {
+    height: 5000px;
     font-family: hero-regular;
     max-width: 767px;
     background-color: var(--secondary-bg-color);
@@ -80,7 +83,9 @@ display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+padding: 20px 0;    
 }
+
 .mobile-image-wrappers {
 max-width: 100%;
 
@@ -89,9 +94,6 @@ max-width: 100%;
 .mobile-image-wrappers img{
 max-width: 100%;
 
-
-
-
 }
 .column-text-containers {
     display: flex;
@@ -99,11 +101,56 @@ max-width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
+    row-gap: 15px;
+    padding: 15px 5vw;
+    border: 3px solid black;
+    word-wrap: break-word;
+}
+.titles {
+    text-transform: uppercase;
+    text-align: center;
+}
+#span-2 {
+background-color: var(--primary-bg-color);
+padding: 0 40px;
+border-radius: 3px 12px 3px 12px;
+
+}
+#span-3  {
+    background-color: var(--primary-bg-color);
+    padding: 0 60px;
+    border-radius: 3px 12px 3px 12px;
+    
 }
 
+#section-2-title {
+    
+    padding: 0 50px 25px;
+}
+#section-2-paragraph-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+row-gap: 25px;
+
+}
+.section-2-p-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.section-2-p-wrapper p:nth-child(1) {
+background-color: black;
+color: var(--primary-bg-color);
 
 
 
+}
 
 
 }
