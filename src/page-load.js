@@ -1,7 +1,8 @@
 import mobileMenuIcon from './mobile-menu-icon.jpg'
 import section1Image from './bolaven-plateau.png'
-
 import section3Image1 from './section3.svg'
+import section4Image from './section4image.jpg'
+import section5Image from './section5image.jpg'
 
 function headerComponent() {
     const headerContainer = document.createElement('header');
@@ -210,74 +211,126 @@ title.textContent = "sustainable farming practices";
 const cardsContainer = document.createElement('div');
 cardsContainer.id = 'section-3-card-containers';
 
+// function that creates elements and append to container
 createCardItemsFromObject(section3CardItemsArray, cardsContainer)
-
-
-
-// const card1Item = document.createElement('div');
-// card1Item.classList.add('card-items');
-// const image1 = new Image();
-// image1.src = card1Image;
-// image1.alt = 'blueish green screen icon with settings icon on top right'
-// const card1Title = document.createElement('h2');
-// card1Title.classList.add('card-titles');
-// card1Title.textContent = 'product web development'
-// const card1Paragraph = document.createElement('p');
-// card1Paragraph.classList.add('card-paragraphs');
-// card1Paragraph.textContent ="Revolutionizing lifestyles, Nutranation crafts brands from the essence of women's everyday realities. Our real-time development process fosters dynamism, creativity, and personalized solutions."; 
-
-// const card2Item = document.createElement('div');
-// card2Item.classList.add('card-items');
-// const image2 = new Image();
-// image2.src = card2Image;
-// image2.alt = 'blueish green screen icon with settings icon on top right'
-// const card2Title = document.createElement('h2');
-// card2Title.classList.add('card-titles');
-// card2Title.textContent = 'branding & design'
-// const card2Paragraph = document.createElement('p');
-// card2Paragraph.classList.add('card-paragraphs');
-// card2Paragraph.textContent ="As our brand evolves, our creative team springs into action, unlocking the latent potential of our products to sculpt captivating brands. From conception to completion, it's all made from us."; 
-
-// const card3Item = document.createElement('div');
-// card3Item.classList.add('card-items');
-// const image3 = new Image();
-// image3.src = card3Image;
-// image3.alt = 'blueish green screen icon with settings icon on top right'
-// const card3Title = document.createElement('h2');
-// card3Title.classList.add('card-titles');
-// card3Title.textContent = 'performance marketing'
-// const card3Paragraph = document.createElement('p');
-// card3Paragraph.classList.add('card-paragraphs');
-// card3Paragraph.textContent ="In anticipation of the product and brand launch, we meticulously craft our marketing strategy. Our continuous process of performance marketing optimisation fuels the creation of impactful advertising campaigns."; 
-
-
-// card1Item.appendChild(image1)
-// card1Item.appendChild(card1Title)
-// card1Item.appendChild(card1Paragraph)
-
-// card2Item.appendChild(image2)
-// card2Item.appendChild(card2Title)
-// card2Item.appendChild(card2Paragraph)
-
-// card3Item.appendChild(image3)
-// card3Item.appendChild(card3Title)
-// card3Item.appendChild(card3Paragraph)
-
-
-
-// cardsContainer.appendChild(card1Item)
-// cardsContainer.appendChild(card2Item)
-// cardsContainer.appendChild(card3Item)
 
 parentContainer.appendChild(title)
 parentContainer.appendChild(cardsContainer)
 
+return parentContainer;
+}
+function section4Component() {
+    const parentContainer = document.createElement('div');
+parentContainer.id = 'section-4-parent-container'
+parentContainer.classList.add('section-parents')
+
+const imageWrapper = document.createElement('div');
+imageWrapper.id = 'section-4-mobile-image-wrapper';
+imageWrapper.classList.add('mobile-image-wrappers')
+
+const image = new Image();
+image.src = section4Image;
+image.alt = 'close up of hands scooping handful of green coffee beans from brown sack'
+
+// const image2 = new Image();
+// image2.id = 'section-1-image-2'
+// image2.src = section1Image2;
+
+imageWrapper.appendChild(image)
+// imageWrapper2.appendChild(image2)
+
+const textContainer = document.createElement('div');
+textContainer.id = 'section-4-text-container';
+textContainer.classList.add('column-text-containers')
+
+const title = document.createElement('h2')
+title.classList.add('titles')
+title.textContent = "Sourcing & distributing the best coffee beans from South East Asia"
+
+// wrapWordInSpan('coffee', 'artisans', title)
+// wrapWordInSpan('artisans', title)
+
+const p1 = document.createElement('p');
+p1.classList.add('paragraphs')
+p1.textContent = "Our sourcing methods is a meticulous process driven by a quest for exceptional quality and unique flavor profiles. With countries like Vietnam, Indonesia, Thailand, and Laos renowned for their award winning coffee production.";
+const p2 = document.createElement('p');
+p2.classList.add('paragraphs')
+p2.textContent = "Are you as curious and adventurous as us?";
+
+// wrapWordInSpan('Nutranation', paragraph)
+// const anchorButton = document.createElement('a');
+// anchorButton.classList.add('anchor-buttons')
+// anchorButton.textContent = 'meet us';
 
 
-
+parentContainer.appendChild(imageWrapper)
+// parentContainer.appendChild(imageWrapper2)
+textContainer.appendChild(title)
+textContainer.appendChild(p1)
+textContainer.appendChild(p2)
+// textContainer.appendChild(anchorButton)
+parentContainer.appendChild(textContainer)
 
 return parentContainer;
 }
+function section5Component() {
+    {
+        const parentContainer = document.createElement('div');
+    parentContainer.id = 'section-5-parent-container'
+    parentContainer.classList.add('section-parents')
+    
+    const imageWrapper = document.createElement('div');
+    imageWrapper.id = 'section-4-mobile-image-wrapper';
+    imageWrapper.classList.add('mobile-image-wrappers')
+    
+    const image = new Image();
+    image.src = section5Image;
+    image.alt = 'close up of hands scooping handful of green coffee beans from brown sack'
+    
+    // const image2 = new Image();
+    // image2.id = 'section-1-image-2'
+    // image2.src = section1Image2;
+    
+    imageWrapper.appendChild(image)
+    // imageWrapper2.appendChild(image2)
+    
+    const textContainer = document.createElement('div');
+    textContainer.id = 'section-5-text-container';
+    textContainer.classList.add('column-text-containers')
+    
+    const title = document.createElement('h2')
+    title.classList.add('titles')
+    title.textContent = "Our dedication and passion to bring you the most value"
+    
+    // wrapWordInSpan('coffee', 'artisans', title)
+    // wrapWordInSpan('artisans', title)
+    
+    const p1 = document.createElement('p');
+    p1.classList.add('paragraphs')
+    p1.textContent = "Our expert buyers and roasters embark on a year round journey to discover the finest beans.";
+    const p2 = document.createElement('p');
+    p2.classList.add('paragraphs')
+    p2.textContent = "They wonder lush mountains, visit local farms, and engage with passionate farmers and their communities who have honed their craft over generations.";
+    
+    // wrapWordInSpan('Nutranation', paragraph)
+    // const anchorButton = document.createElement('a');
+    // anchorButton.classList.add('anchor-buttons')
+    // anchorButton.textContent = 'meet us';
+    
+    
+    parentContainer.appendChild(imageWrapper)
+    // parentContainer.appendChild(imageWrapper2)
+    textContainer.appendChild(title)
+    textContainer.appendChild(p1)
+    textContainer.appendChild(p2)
+    // textContainer.appendChild(anchorButton)
+    parentContainer.appendChild(textContainer)
+    
+    return parentContainer;
+    }
+
+}
+
 
 
 
@@ -323,28 +376,39 @@ function createParagraphsFromObject(obj, parentContainer) {
     }
 }
 const section3CardItemsArray = [
-{image: section3Image1,
-    title: 'hello card 1',
-    description: 'blah blah blah'
+{
+    image: section3Image1,
+    title: '☕️ excellent growing conditions',
+    description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation."
 },
-{image: section3Image1,
-    title: 'hello card 2',
-    description: 'blah blah blah'
+{
+    image: section3Image1,
+    title: '☕️ organic farming practices',
+    description: 'Many coffee farms on the Bolaven Plateau practice organic farming methods. These farmers prioritize sustainable and environmentally friendly practices, avoiding the use of synthetic fertilizers and pesticides.'
 },
+{
+    image: section3Image1,
+    title: '☕️ Diverse Distintc Flavors',
+    description: "Diversity of Flavors: Coffee beans from the Bolaven Plateau exhibit a diverse range of flavors. The region's unique microclimate and soil composition contribute to the distinct taste profiles of its coffee. You can find flavor notes such as chocolate, floral, fruity, and nutty in Bolaven coffee."
+},
+
+
+
+
 
 ]
 function createCardItemsFromObject(obj, parentContainer) {
     for (let key in obj) {
         const cardItem = document.createElement('div');
-        cardItem.classList.add('card-items');
+        cardItem.classList.add('section-3-card-items');
 
         const image = new Image();
         image.src = obj[key].image;
-        image.alt = 'blueish green screen icon with settings icon on top right';
+        image.alt = obj[key].alt;
         cardItem.appendChild(image);
 
-        const title = document.createElement('h2');
-        title.classList.add('card-titles');
+        const title = document.createElement('h3');
+        title.classList.add('section-3-card-titles');
         title.textContent = obj[key].title;
         cardItem.appendChild(title);
 
@@ -360,13 +424,13 @@ function createCardItemsFromObject(obj, parentContainer) {
 
 
 
-
-
 export {
     headerComponent,
     section1Component,
     section2Component,
     section3Component,
+    section4Component,
+    section5Component,
     
     
 
