@@ -3,6 +3,8 @@ import section1Image from './bolaven-plateau.png'
 import section3Image1 from './section3.svg'
 import section4Image from './section4image.jpg'
 import section5Image from './section5image.jpg'
+import lineImage from './section3.svg'
+
 
 function headerComponent() {
     const headerContainer = document.createElement('header');
@@ -61,7 +63,6 @@ ul.appendChild(li4)
 menuButton.addEventListener('click',(event) => {
     
 const navItems = document.querySelector('.nav-items');
-
 
 navItems.classList.toggle('nav-items-open');
 
@@ -310,7 +311,7 @@ function section5Component() {
     p1.textContent = "Our expert buyers and roasters embark on a year round journey to discover the finest beans.";
     const p2 = document.createElement('p');
     p2.classList.add('paragraphs')
-    p2.textContent = "They wonder lush mountains, visit local farms, and engage with passionate farmers and their communities who have honed their craft over generations.";
+    p2.textContent = "They wonder lush mountains, visit local farms, and engage with passionate farmers and their communities that are crucial to the coffee production process.";
     
     // wrapWordInSpan('Nutranation', paragraph)
     // const anchorButton = document.createElement('a');
@@ -330,6 +331,68 @@ function section5Component() {
     }
 
 }
+function section6Component() {
+    const parentContainer = document.createElement('div');
+    parentContainer.id = 'section-6-parent-container';
+    parentContainer.classList.add('section-parents');
+
+    const button = document.createElement('button');
+    button.textContent = 'Click me';
+
+    const socialsContainer = document.createElement('div');
+    socialsContainer.classList.add('socials-container');
+    
+    createSocialMediaElement(lineImage,"https://www.google.com", "Chat using LINE",socialsContainer)
+    createSocialMediaElement(lineImage,"https://www.google.com", "Chat using LINE",socialsContainer)
+    createSocialMediaElement(lineImage,"https://www.google.com", "Chat using LINE",socialsContainer)
+
+    button.addEventListener('click', (event) => {
+        const socialLinkItems = document.querySelector('.socials-container');
+        socialLinkItems.classList.toggle('social-items-open');
+
+    const socialLinksOpen = document.querySelector('.social-items-open');
+
+    if (socialLinksOpen) {
+        socialLinksOpen.addEventListener('click', () => {
+            socialLinkItems.classList.remove('social-items-open');
+        });
+    }
+        
+});
+
+    parentContainer.appendChild(button);
+    parentContainer.appendChild(socialsContainer);
+
+    return parentContainer;
+}
+
+function createSocialMediaElement(imageSrc, link, anchorTextContent,  parentContainer) {
+    const socialWrapper = document.createElement('div');
+    socialWrapper.classList.add('social-wrappers');
+
+    const socialLink = document.createElement('a');
+    socialLink.href = link;
+    socialLink.target = "_blank";
+
+    const socialImage = new Image();
+    socialImage.src = imageSrc;
+    socialImage.alt = anchorTextContent;
+
+    socialLink.appendChild(socialImage);
+
+    const anchorLink = document.createElement('a');
+    anchorLink.href = link;
+    anchorLink.target = "_blank";
+    anchorLink.textContent = anchorTextContent;
+
+    socialWrapper.appendChild(socialLink);
+    socialWrapper.appendChild(anchorLink);
+
+    parentContainer.appendChild(socialWrapper);
+}
+
+
+
 
 
 
@@ -431,6 +494,7 @@ export {
     section3Component,
     section4Component,
     section5Component,
+    section6Component,
     
     
 
