@@ -337,6 +337,7 @@ function section6Component() {
     parentContainer.classList.add('section-parents');
 
     const button = document.createElement('button');
+    button.classList.add('call-to-action-buttons')
     button.textContent = 'Click me';
 
     const socialsContainer = document.createElement('div');
@@ -357,7 +358,7 @@ function section6Component() {
             socialLinkItems.classList.remove('social-items-open');
         });
     }
-        
+       
 });
 
     parentContainer.appendChild(button);
@@ -391,9 +392,75 @@ function createSocialMediaElement(imageSrc, link, anchorTextContent,  parentCont
     parentContainer.appendChild(socialWrapper);
 }
 
+function section7Component() {
+    {
+        const parentContainer = document.createElement('div');
+    parentContainer.id = 'section-7-parent-container'
+    parentContainer.classList.add('section-parents')
+    
+    const imageWrapper = document.createElement('div');
+    imageWrapper.id = 'section-7-mobile-image-wrapper';
+    imageWrapper.classList.add('mobile-image-wrappers')
+    
+    const image = new Image();
+    image.src = section5Image;
+    image.alt = 'close up of hands scooping handful of green coffee beans from brown sack'
+    
+    // const image2 = new Image();
+    // image2.id = 'section-1-image-2'
+    // image2.src = section1Image2;
+    
+    imageWrapper.appendChild(image)
+    // imageWrapper2.appendChild(image2)
+    
+    const textContainer = document.createElement('div');
+    textContainer.id = 'section-7-text-container';
+    textContainer.classList.add('column-text-containers')
+    
+    const title = document.createElement('h2')
+    title.classList.add('titles')
+    title.textContent = "We provide full service from sourcing to worldwide logistics and distribution"
+    
+    // wrapWordInSpan('coffee', 'artisans', title)
+    // wrapWordInSpan('artisans', title)
+    
+    const p1 = document.createElement('p');
+    p1.classList.add('paragraphs')
+    p1.textContent = "Our expert buyers and roasters embark on a year round journey to discover the finest beans.";
+    const p2 = document.createElement('p');
+    p2.classList.add('paragraphs')
+    p2.textContent = "They wonder lush mountains, visit local farms, and engage with passionate farmers and their communities that are crucial to the coffee production process.";
+    
+const ulElement = createList('Sourcing', 'Roasting', 'Packaging', 'Logistics', 'Distribution')
 
-
-
+    // wrapWordInSpan('Nutranation', paragraph)
+    // const anchorButton = document.createElement('a');
+    // anchorButton.classList.add('anchor-buttons')
+    // anchorButton.textContent = 'meet us';
+    
+    
+    parentContainer.appendChild(imageWrapper)
+    // parentContainer.appendChild(imageWrapper2)
+    textContainer.appendChild(title)
+    textContainer.appendChild(p1)
+    textContainer.appendChild(p2)
+    textContainer.appendChild(ulElement)
+    // textContainer.appendChild(anchorButton)
+    
+    parentContainer.appendChild(textContainer)
+    
+    return parentContainer;
+    }
+}
+function createList(...items) {
+    const ul = document.createElement('ul');
+    items.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+    });
+    return ul;
+}
 
 
 
@@ -495,6 +562,7 @@ export {
     section4Component,
     section5Component,
     section6Component,
+    section7Component,
     
     
 
