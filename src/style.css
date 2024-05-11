@@ -232,8 +232,19 @@ border-radius: 3px 12px 3px 12px;
 
 }
 
-
-
+#section-9-parent-container {
+    outline: 4px solid black;
+}
+.mobile-forms {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+outline: 4px solid black;
+}
+.mobile-forms label {
+    align-self: flex-start;
+}
 
 
 }

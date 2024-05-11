@@ -497,6 +497,18 @@ parentContainer.appendChild(textContainer)
 
 return parentContainer;
 }
+function section9Component() {
+const parentContainer = document.createElement('div');
+parentContainer.id = 'section-9-parent-container';
+parentContainer.classList.add('section-parents');
+
+const form = createEmailForm();
+
+
+parentContainer.appendChild(form);
+return parentContainer;
+}
+
 
 
 function createList(...items) {
@@ -603,7 +615,25 @@ function createParagraphElement(text) {
     p.textContent = text;
     return p;
 }
+function createEmailForm() {
+    const form = document.createElement('form');
+    form.classList.add('mobile-forms');
+    const emailLabel = document.createElement('label');
+    emailLabel.textContent = 'Email:';
+    const emailInput = document.createElement('input');
+    emailInput.type = 'email';
+    emailInput.name = 'email';
+    emailInput.required = true;
 
+    const submitButton = document.createElement('button');
+    submitButton.type = 'submit';
+    submitButton.textContent = 'Submit for coffee';
+    
+    form.appendChild(emailLabel);
+    form.appendChild(emailInput);
+    form.appendChild(submitButton);
+    return form;
+}
 
 
 
@@ -619,6 +649,7 @@ export {
     section6Component,
     section7Component,
     section8Component,
+    section9Component,
     
     
 
