@@ -7,6 +7,7 @@ import {
     section5Component,
     section6Component,
     section7Component,
+    section8Component,
 } from './page-load'
 import './style.css'
 
@@ -19,6 +20,7 @@ content.appendChild(section4Component())
 content.appendChild(section6Component())
 content.appendChild(section5Component())
 content.appendChild(section7Component())
+content.appendChild(section8Component())
 
 
 

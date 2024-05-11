@@ -421,19 +421,15 @@ function section7Component() {
     title.classList.add('titles')
     title.textContent = "We provide full service from sourcing to worldwide logistics and distribution"
     
-    // wrapWordInSpan('coffee', 'artisans', title)
-    // wrapWordInSpan('artisans', title)
-    
     const p1 = document.createElement('p');
     p1.classList.add('paragraphs')
-    p1.textContent = "Our expert buyers and roasters embark on a year round journey to discover the finest beans.";
+    p1.textContent = "Let us know your needs";
     const p2 = document.createElement('p');
     p2.classList.add('paragraphs')
-    p2.textContent = "They wonder lush mountains, visit local farms, and engage with passionate farmers and their communities that are crucial to the coffee production process.";
+    p2.textContent = "We guarantee you the best quality and service";
     
 const ulElement = createList('Sourcing', 'Roasting', 'Packaging', 'Logistics', 'Distribution')
 
-    // wrapWordInSpan('Nutranation', paragraph)
     // const anchorButton = document.createElement('a');
     // anchorButton.classList.add('anchor-buttons')
     // anchorButton.textContent = 'meet us';
@@ -446,12 +442,63 @@ const ulElement = createList('Sourcing', 'Roasting', 'Packaging', 'Logistics', '
     textContainer.appendChild(p2)
     textContainer.appendChild(ulElement)
     // textContainer.appendChild(anchorButton)
-    
+
     parentContainer.appendChild(textContainer)
     
     return parentContainer;
     }
 }
+function section8Component() {
+    const parentContainer = document.createElement('div');
+parentContainer.id = 'section-8-parent-container'
+parentContainer.classList.add('section-parents')
+
+const imageWrapper = document.createElement('div');
+imageWrapper.id = 'section-8-mobile-image-wrapper';
+imageWrapper.classList.add('mobile-image-wrappers')
+
+const image = new Image();
+image.src = section5Image;
+image.alt = 'close up of hands scooping handful of green coffee beans from brown sack'
+
+// const image2 = new Image();
+// image2.id = 'section-1-image-2'
+// image2.src = section1Image2;
+
+imageWrapper.appendChild(image)
+// imageWrapper2.appendChild(image2)
+
+const textContainer = document.createElement('div');
+textContainer.id = 'section-8-text-container';
+textContainer.classList.add('column-text-containers')
+
+const title = document.createElement('h2')
+title.classList.add('titles')
+title.textContent = "Seeing is believing"
+
+const p1 = createParagraphElement("Join us on a journey to the Bolaven Plateau in Southern Laos, where you can witness the beauty of coffee cultivation and processing first-hand. Experience the sights, sounds, and aromas of the coffee farms, and learn about the rich history and culture of the region.")
+const p2 = createParagraphElement("We organize guided tours 4 times a year for coffee enthusiasts and industry professionals.")
+const p3 = createParagraphElement("Private tours can be arranged upon request from any part of the world. We can also organize virtual tours for those who are unable to travel to Laos.")
+
+// const anchorButton = document.createElement('a');
+// anchorButton.classList.add('anchor-buttons')
+// anchorButton.textContent = 'meet us';
+
+parentContainer.appendChild(imageWrapper)
+// parentContainer.appendChild(imageWrapper2)
+textContainer.appendChild(title)
+textContainer.appendChild(p1)
+textContainer.appendChild(p2)
+textContainer.appendChild(p3)
+
+// textContainer.appendChild(anchorButton)
+
+parentContainer.appendChild(textContainer)
+
+return parentContainer;
+}
+
+
 function createList(...items) {
     const ul = document.createElement('ul');
     items.forEach(item => {
@@ -550,6 +597,14 @@ function createCardItemsFromObject(obj, parentContainer) {
         parentContainer.appendChild(cardItem);
     }
 }
+function createParagraphElement(text) {
+    const p = document.createElement('p');
+    p.classList.add('paragraphs');
+    p.textContent = text;
+    return p;
+}
+
+
 
 
 
@@ -563,6 +618,7 @@ export {
     section5Component,
     section6Component,
     section7Component,
+    section8Component,
     
     
 
