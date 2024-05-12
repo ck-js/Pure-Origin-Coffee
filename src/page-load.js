@@ -508,6 +508,41 @@ const form = createEmailForm();
 parentContainer.appendChild(form);
 return parentContainer;
 }
+function section10Component() {
+    const parentContainer = document.createElement('div');
+parentContainer.id = 'section-10-parent-container'
+parentContainer.classList.add('section-parents')
+
+const title = createTitleElement('h2', "Wholesale Products");
+
+const cardsContainer = document.createElement('div');
+cardsContainer.id = 'section-10-card-containers';
+
+// function that creates elements and append to container
+createCardItemsFromObject(section10CarddItemsArray, cardsContainer)
+
+parentContainer.appendChild(title)
+parentContainer.appendChild(cardsContainer)
+
+return parentContainer;
+}
+function createTitleElement(headingLevel, text) {
+    const title = document.createElement(headingLevel);
+    title.classList.add('titles');
+    title.textContent = text;
+    return title;
+}
+
+
+
+const section10CarddItemsArray = [
+    {
+    image: section3Image1,
+    title: '☕️ 1KG Washed Arabica Bolaven Green Beans', 
+    description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
+    price: "$10.00"
+},
+]
 
 
 
@@ -596,6 +631,12 @@ function createCardItemsFromObject(obj, parentContainer) {
         image.alt = obj[key].alt;
         cardItem.appendChild(image);
 
+        if (obj[key].price) {
+        const price = document.createElement('p');
+        price.classList.add('card-paragraphs');
+        price.textContent = obj[key].price;
+        cardItem.appendChild(price);
+        }
         const title = document.createElement('h3');
         title.classList.add('section-3-card-titles');
         title.textContent = obj[key].title;
@@ -627,7 +668,7 @@ function createEmailForm() {
 
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
-    submitButton.textContent = 'Submit for coffee';
+    submitButton.textContent = 'Coffee lovers unite';
     
     form.appendChild(emailLabel);
     form.appendChild(emailInput);
@@ -650,6 +691,8 @@ export {
     section7Component,
     section8Component,
     section9Component,
+    section10Component,
+
     
     
 
