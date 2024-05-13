@@ -1,6 +1,7 @@
 import {
     headerComponent,
     section10Component,
+    section11Component,
     section1Component,
     section2Component,
     section3Component,
@@ -25,6 +26,7 @@ content.appendChild(section9Component())
 content.appendChild(section7Component())
 content.appendChild(section8Component())
 content.appendChild(section10Component())
+content.appendChild(section11Component())
 
 
 

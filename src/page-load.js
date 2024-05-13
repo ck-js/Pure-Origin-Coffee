@@ -540,9 +540,53 @@ const section10CarddItemsArray = [
     image: section3Image1,
     title: '☕️ 1KG Washed Arabica Bolaven Green Beans', 
     description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
-    price: "$10.00"
+    price: "$06.25 / per KG"
+},
+{
+    image: section3Image1,
+    title: '☕️ 5KG Washed Arabica Bolaven Green Beans', 
+    description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
+    price: "$31.28 / $06.25 per KG"
+},
+{
+    image: section3Image1,
+    title: '☕️ 10KG Washed Arabica Bolaven Green Beans', 
+    description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
+    price: "$61.18 / $06.12 per KG"
+},
+{
+    image: section3Image1,
+    title: '☕️ 25KG Washed Arabica Bolaven Green Beans', 
+    description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
+    price: "$149.48 / $05.98 per KG"
+},
+{
+    image: section3Image1,
+    title: '☕️ 50KG Washed Arabica Bolaven Green Beans', 
+    description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
+    price: "$285.56 / $05.71 per KG"
+},
+{
+    image: section3Image1,
+    title: '☕️ 100KG Washed Arabica Bolaven Green Beans', 
+    description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
+    price: "$543.63 / $05.44 per KG"
 },
 ]
+function section11Component() {
+    const parentContainer = document.createElement('div');
+    parentContainer.id = 'section-11-parent-container';
+    parentContainer.classList.add('section-parents');
+    
+const title = createTitleElement("h2", "Order / Enquiries Form")
+
+    const form = createOrderForm();
+
+    parentContainer.appendChild(title);
+    parentContainer.appendChild(form);
+    return parentContainer;
+    }
+
 
 
 
@@ -660,8 +704,11 @@ function createEmailForm() {
     const form = document.createElement('form');
     form.classList.add('mobile-forms');
     const emailLabel = document.createElement('label');
+    emailLabel.htmlFor = 'email';
     emailLabel.textContent = 'Email:';
+
     const emailInput = document.createElement('input');
+    emailInput.id = 'email';
     emailInput.type = 'email';
     emailInput.name = 'email';
     emailInput.required = true;
@@ -675,7 +722,70 @@ function createEmailForm() {
     form.appendChild(submitButton);
     return form;
 }
+function createOrderForm() {
+    const form = document.createElement('form');
+    form.classList.add('mobile-forms');
 
+    const nameLabel = document.createElement('label');
+    nameLabel.htmlFor = 'name';
+    nameLabel.textContent = 'Name:';
+
+    const nameInput = document.createElement('input');
+    nameInput.id = 'name';
+    nameInput.type = 'text';
+    nameInput.name = 'name';
+    nameInput.required = true;
+
+    form.appendChild(nameLabel);
+    form.appendChild(nameInput);
+
+    const emailLabel = document.createElement('label');
+    emailLabel.htmlFor = 'email';
+    emailLabel.textContent = 'Email:';
+
+    const emailInput = document.createElement('input');
+    emailInput.id = 'email';
+    emailInput.type = 'email';
+    emailInput.name = 'email';
+    emailInput.required = true;
+
+    form.appendChild(emailLabel);
+    form.appendChild(emailInput);
+
+    const subjectLabel = document.createElement('label');
+    subjectLabel.htmlFor = 'subject';
+    subjectLabel.textContent = 'Subject:';
+
+    const subjectInput = document.createElement('input');
+    subjectInput.placeholder = "1000KG Russia"
+    subjectInput.id = 'subject';
+    subjectInput.type = 'text';
+    subjectInput.name = 'subject';
+    subjectInput.required = true;
+
+    form.appendChild(subjectLabel);
+    form.appendChild(subjectInput);
+
+    const messageLabel = document.createElement('label');
+    messageLabel.htmlFor = 'message';
+    messageLabel.textContent = 'Message:';
+
+    const messageInput = document.createElement('textarea');
+    messageInput.id = 'message';
+    messageInput.rows = 10;
+    messageInput.name = 'message';
+    messageInput.required = true;
+messageInput.placeholder = "I love coffee so much I want to order 10,000KG!"
+    form.appendChild(messageLabel);
+    form.appendChild(messageInput);
+
+    const submitButton = document.createElement('button');
+    submitButton.type = 'submit';
+    submitButton.textContent = 'Lets build a coffee empire!';
+form.appendChild(submitButton);
+
+    return form;
+}
 
 
 
@@ -692,8 +802,8 @@ export {
     section8Component,
     section9Component,
     section10Component,
+    section11Component,
 
-    
     
 
 } 

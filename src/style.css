@@ -246,6 +246,7 @@ justify-content: center;
 align-items: center;
 /* outline: 4px solid black; */
 row-gap: 20px;
+
 }
 .mobile-forms label {
     align-self: flex-start;
@@ -271,5 +272,12 @@ row-gap: 20px;
         font-size: 18px;
     }
 
+    .mobile-forms textarea {
+        width: 100%;
+        
+        background-color: lightgray;
+        font-size: 24px;
+        border: 3px solid black;
 
+    }
 }
