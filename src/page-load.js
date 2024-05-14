@@ -3,7 +3,9 @@ import section1Image from './bolaven-plateau.png'
 import section3Image1 from './section3.svg'
 import section4Image from './section4image.jpg'
 import section5Image from './section5image.jpg'
-import lineImage from './section3.svg'
+import lineImage from './line.svg'
+import whatsappImage from './square-whatsapp.svg'
+import messengerImage from './facebook-messenger.svg'
 
 
 function headerComponent() {
@@ -338,16 +340,17 @@ function section6Component() {
 
     const button = document.createElement('button');
     button.classList.add('call-to-action-buttons')
-    button.textContent = 'Click me';
+    button.textContent = 'Roast Us on socials  ↓';
 
     const socialsContainer = document.createElement('div');
     socialsContainer.classList.add('socials-container');
     
     createSocialMediaElement(lineImage,"https://www.google.com", "Chat using LINE",socialsContainer)
-    createSocialMediaElement(lineImage,"https://www.google.com", "Chat using LINE",socialsContainer)
-    createSocialMediaElement(lineImage,"https://www.google.com", "Chat using LINE",socialsContainer)
+    createSocialMediaElement(whatsappImage,"https://www.google.com", "Chat using LINE",socialsContainer)
+    createSocialMediaElement(messengerImage,"https://www.google.com", "Chat using LINE",socialsContainer)
 
     button.addEventListener('click', (event) => {
+        button.textContent = 'thanks for dark roasting us  ↑';
         const socialLinkItems = document.querySelector('.socials-container');
         socialLinkItems.classList.toggle('social-items-open');
 
@@ -356,9 +359,13 @@ function section6Component() {
     if (socialLinksOpen) {
         socialLinksOpen.addEventListener('click', () => {
             socialLinkItems.classList.remove('social-items-open');
+            
         });
+        
     }
-       
+
+
+
 });
 
     parentContainer.appendChild(button);
@@ -583,7 +590,7 @@ const title = createTitleElement("h2", "Order / Enquiries Form")
     const form = createOrderForm();
 
     parentContainer.appendChild(title);
-    parentContainer.appendChild(form);
+        parentContainer.appendChild(form);
     return parentContainer;
     }
 
@@ -725,6 +732,9 @@ function createEmailForm() {
 function createOrderForm() {
     const form = document.createElement('form');
     form.classList.add('mobile-forms');
+
+    const p1 = createParagraphElement("A coffee loving human will get back to you within 12 hours!")
+    form.appendChild(p1)
 
     const nameLabel = document.createElement('label');
     nameLabel.htmlFor = 'name';

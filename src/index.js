@@ -14,8 +14,10 @@ import {
 } from './page-load'
 import './style.css'
 
+const body = document.body;
 const content = document.getElementById('content')
-content.appendChild(headerComponent())
+
+body.insertBefore(headerComponent(), body.firstChild);
 content.appendChild(section1Component())
 content.appendChild(section2Component())
 content.appendChild(section3Component())
