@@ -301,9 +301,8 @@ function section5Component() {
     textContainer.id = 'section-5-text-container';
     textContainer.classList.add('column-text-containers')
     
-    const title = document.createElement('h2')
-    title.classList.add('titles')
-    title.textContent = "Our dedication and passion to bring you the most value"
+    const title = createTitleElement('h2', "Our dedication and passion to bring you the best value")
+    
     
     // wrapWordInSpan('coffee', 'artisans', title)
     // wrapWordInSpan('artisans', title)
@@ -346,11 +345,18 @@ function section6Component() {
     socialsContainer.classList.add('socials-container');
     
     createSocialMediaElement(lineImage,"https://www.google.com", "Chat using LINE",socialsContainer)
-    createSocialMediaElement(whatsappImage,"https://www.google.com", "Chat using LINE",socialsContainer)
-    createSocialMediaElement(messengerImage,"https://www.google.com", "Chat using LINE",socialsContainer)
+    createSocialMediaElement(whatsappImage,"https://www.google.com", "Chat on Whatsapp",socialsContainer)
+    createSocialMediaElement(messengerImage,"https://www.google.com", "Chat on Messenger",socialsContainer)
 
+    
     button.addEventListener('click', (event) => {
-        button.textContent = 'thanks for dark roasting us  ↑';
+        
+        if (button.textContent === 'Roast Us on socials  ↓') {
+            button.textContent = 'thanks for dark roasting us  ↑';
+        } else {
+            button.textContent = 'Roast Us on socials  ↓';
+        }
+        
         const socialLinkItems = document.querySelector('.socials-container');
         socialLinkItems.classList.toggle('social-items-open');
 
@@ -479,14 +485,12 @@ const textContainer = document.createElement('div');
 textContainer.id = 'section-8-text-container';
 textContainer.classList.add('column-text-containers')
 
-const title = document.createElement('h2')
-title.classList.add('titles')
-title.textContent = "Seeing is believing"
+const title = createTitleElement('h2', "one life to experience it all")
 
 const p1 = createParagraphElement("Join us on a journey to the Bolaven Plateau in Southern Laos, where you can witness the beauty of coffee cultivation and processing first-hand. Experience the sights, sounds, and aromas of the coffee farms, and learn about the rich history and culture of the region.")
-const p2 = createParagraphElement("We organize guided tours 4 times a year for coffee enthusiasts and industry professionals.")
+const p2 = createParagraphElement("We organize guided tours 4 times a year for coffee enthusiasts.")
 const p3 = createParagraphElement("Private tours can be arranged upon request from any part of the world. We can also organize virtual tours for those who are unable to travel to Laos.")
-
+const p4 = createParagraphElement("* Accomadations for disabled & special needs can be arranged.")
 // const anchorButton = document.createElement('a');
 // anchorButton.classList.add('anchor-buttons')
 // anchorButton.textContent = 'meet us';
@@ -494,6 +498,7 @@ const p3 = createParagraphElement("Private tours can be arranged upon request fr
 parentContainer.appendChild(imageWrapper)
 // parentContainer.appendChild(imageWrapper2)
 textContainer.appendChild(title)
+textContainer.appendChild(p4)
 textContainer.appendChild(p1)
 textContainer.appendChild(p2)
 textContainer.appendChild(p3)
@@ -510,7 +515,6 @@ parentContainer.id = 'section-9-parent-container';
 parentContainer.classList.add('section-parents');
 
 const form = createEmailForm();
-
 
 parentContainer.appendChild(form);
 return parentContainer;
@@ -722,7 +726,7 @@ function createEmailForm() {
 
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
-    submitButton.textContent = 'Coffee lovers unite';
+    submitButton.textContent = 'stay in touch';
     
     form.appendChild(emailLabel);
     form.appendChild(emailInput);
