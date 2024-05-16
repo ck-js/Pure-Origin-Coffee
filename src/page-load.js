@@ -551,37 +551,43 @@ const section10CarddItemsArray = [
     image: section3Image1,
     title: '☕️ 1KG Washed Arabica Bolaven Green Beans', 
     description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
-    price: "$06.25 / per KG"
+    price: "$06.25 / per KG",
+    priceRegular: "$06.88 / per KG",
 },
 {
     image: section3Image1,
     title: '☕️ 5KG Washed Arabica Bolaven Green Beans', 
     description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
-    price: "$31.28 / $06.25 per KG"
+    price: "$31.28 / $06.25 per KG",
+    priceRegular: "$34.41 / $06.88 per KG",
 },
 {
     image: section3Image1,
     title: '☕️ 10KG Washed Arabica Bolaven Green Beans', 
     description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
-    price: "$61.18 / $06.12 per KG"
+    price: "$61.18 / $06.12 per KG",
+    priceRegular: "$67.30 / $06.73 per KG",
 },
 {
     image: section3Image1,
     title: '☕️ 25KG Washed Arabica Bolaven Green Beans', 
     description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
-    price: "$149.48 / $05.98 per KG"
+    price: "$149.48 / $05.98 per KG",
+    priceRegular: "$164.43 / $06.58 per KG"
 },
 {
     image: section3Image1,
     title: '☕️ 50KG Washed Arabica Bolaven Green Beans', 
     description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
-    price: "$285.56 / $05.71 per KG"
+    price: "$285.56 / $05.71 per KG",
+    priceRegular: "$314.12 / $06.28 per KG"
 },
 {
     image: section3Image1,
     title: '☕️ 100KG Washed Arabica Bolaven Green Beans', 
     description: "The Bolaven Plateau is a fertile region with a temperate climate, perfect for growing coffee plants. The high altitude and volcanic soil provide the ideal conditions for coffee cultivation.",
-    price: "$543.63 / $05.44 per KG"
+    price: "$543.63 / $05.44 per KG",
+    priceRegular: "$597.99 / $05.98 per KG"
 },
 ]
 function section11Component() {
@@ -686,16 +692,24 @@ function createCardItemsFromObject(obj, parentContainer) {
         image.alt = obj[key].alt;
         cardItem.appendChild(image);
 
+        const title = document.createElement('h3');
+        title.classList.add('section-3-card-titles');
+        title.textContent = obj[key].title;
+        cardItem.appendChild(title);
+
         if (obj[key].price) {
         const price = document.createElement('p');
         price.classList.add('card-paragraphs');
         price.textContent = obj[key].price;
         cardItem.appendChild(price);
         }
-        const title = document.createElement('h3');
-        title.classList.add('section-3-card-titles');
-        title.textContent = obj[key].title;
-        cardItem.appendChild(title);
+        if (obj[key].priceRegular) {
+            const priceRegular = document.createElement('p');
+            priceRegular.classList.add('card-paragraph-regular-prices');
+            priceRegular.textContent = obj[key].price;
+            cardItem.appendChild(priceRegular);
+            }
+
 
         const description = document.createElement('p');
         description.classList.add('card-paragraphs');
