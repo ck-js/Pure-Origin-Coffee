@@ -603,7 +603,20 @@ const title = createTitleElement("h2", "Order / Enquiries Form")
         parentContainer.appendChild(form);
     return parentContainer;
     }
+function footerComponent() {
+const parentContainer = document.createElement('footer');
+parentContainer.classList.add('section-parents')
 
+const title = createTitleElement('h1', "Pure Origin")
+const p1 = createParagraphElement("Pure Origin Coffee Lab ©")
+const p2 = createParagraphElement("All Rights Reserved")
+
+parentContainer.appendChild(title)
+parentContainer.appendChild(p1)
+parentContainer.appendChild(p2)
+
+return parentContainer;
+}
 
 
 
@@ -645,8 +658,8 @@ let section2ParagraphsObj2 = {
     paragraph2: 'area'
 };
 let section2ParagraphsObj3 = {
-    paragraph1: '20,000 tons annual',
-    paragraph2: 'production'
+    paragraph1: '20,000 tons',
+    paragraph2: 'annual'
 };
 
 
@@ -831,6 +844,8 @@ export {
     section9Component,
     section10Component,
     section11Component,
+    footerComponent,
+
 
     
 

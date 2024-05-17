@@ -1,4 +1,5 @@
 import {
+    footerComponent,
     headerComponent,
     section10Component,
     section11Component,
@@ -29,7 +30,8 @@ content.appendChild(section7Component())
 content.appendChild(section8Component())
 content.appendChild(section10Component())
 content.appendChild(section11Component())
-
+body.insertBefore(footerComponent(), body.lastChild);
+// body.appendChild(footerComponent())
 
 
 
