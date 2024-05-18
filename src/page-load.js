@@ -283,7 +283,7 @@ function section5Component() {
     parentContainer.classList.add('section-parents')
     
     const imageWrapper = document.createElement('div');
-    imageWrapper.id = 'section-4-mobile-image-wrapper';
+    imageWrapper.id = 'section-5-mobile-image-wrapper';
     imageWrapper.classList.add('mobile-image-wrappers')
     
     const image = new Image();

@@ -27,7 +27,7 @@
 }
 
 
-@media (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1280px) {
     body {        
         padding-bottom: 400px;
         font-family: hero-regular;
@@ -248,6 +248,41 @@ width: 82.5%;
         margin-bottom: 15px;
         font-family: var(--bold-hero-font);
     }
+    #section-4-parent-container {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    #section-4-mobile-image-wrapper {
+        flex-basis: 200px;
+        flex-grow: 8;
+    }
+#section-4-text-container {
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding-top: 0;
+padding-bottom: 0;
+
+}
+
+#section-5-parent-container {
+    display: flex;
+    flex-direction: row;    
+}
+#section-5-mobile-image-wrapper {
+    flex-basis: 200px;
+    flex-grow: 8;
+order: 1;
+}
+#section-5-text-container {
+flex-basis: 50%;
+flex-grow: 1;
+padding-top: 0;
+padding-bottom: 0;
+
+}
+
+
     #section-6-parent-container {
         /* outline: 3px solid black; */
         background-color: var(--third-background-color);
@@ -285,19 +320,21 @@ width: 82.5%;
         display: flex;
         flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             row-gap: 20px;
             padding: 30px 0;
             
         }
+
     #section-7-text-container li {
         list-style-type: none;
-        font-size: 24px;
+        font-size: 30px;
         padding: 1px 20px;
         margin-bottom: 20px;
     background-color: black;
     color: var(--primary-bg-color);
     border-radius: 3px 12px 3px 12px;
+    text-transform: uppercase;
     
     }
     #section-8-text-container p:nth-child(2) {
@@ -319,11 +356,19 @@ width: 82.5%;
     }
     #section-10-card-containers {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         row-gap: 25px;
+        column-gap: 25px;
+        flex-wrap: wrap;
     }
+    #section-10-card-containers div {
+flex-basis: 45%;
+flex-grow: 0;
+flex-shrink: 0;
+}
+
     #section-10-card-containers img {
         margin-bottom: 15px;
     }
