@@ -31,8 +31,9 @@
         font-size: 22px;
         font-family: hero-regular;
         background-color: var(--secondary-bg-color);
+        
     padding-bottom: 400px;
-        margin: 0 auto;
+        /* margin: 0 auto; */
         border: 5px solid aqua;
         
     }
@@ -90,6 +91,7 @@
         text-decoration: none;
         color: black;
         padding: 10px 20px;
+        text-transform: uppercase;
     }
     #nav-anchor-button {
     display: none;
@@ -146,6 +148,8 @@ display: flex;
         text-transform: uppercase;
     }
     .anchor-buttons {
+        text-decoration: none;
+        color: black;
         text-transform: uppercase;
     outline: 2px solid black;
     width: 40%;
@@ -502,6 +506,7 @@ flex-shrink: 0;
         text-decoration: none;
         color: black;
         padding: 10px 20px;
+        text-transform: uppercase;
     }
     #nav-anchor-button {
     display: none;
@@ -555,6 +560,8 @@ flex-shrink: 0;
         text-transform: uppercase;
     }
     .anchor-buttons {
+        text-decoration: none;
+        color: black;
         text-transform: uppercase;
     outline: 2px solid black;
     width: 40%;
@@ -913,6 +920,7 @@ flex-direction: column;
     text-decoration: none;
     color: black;
     padding: 10px 20px;
+    text-transform: uppercase;
 }
 #nav-anchor-button {
 display: none;

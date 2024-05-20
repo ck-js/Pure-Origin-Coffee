@@ -38,29 +38,37 @@ const ul = document.createElement('ul');
 ul.classList.add('nav-items')
 const li1 = document.createElement('li');
 const a1 = document.createElement('a');
-a1.href = '#section-2-parent-container';
-a1.textContent = 'process';
+a1.href = '#section-1-parent-container';
+a1.textContent = 'mission';
 li1.appendChild(a1)
 const li2 = document.createElement('li');
 const a2 = document.createElement('a')
-a2.href = '#section-3-parent-container';
+a2.href = '#section-2-parent-container';
 a2.textContent = 'about';
 li2.appendChild(a2)
 const li3 = document.createElement('li');
 const a3 = document.createElement('a');
-a3.href = '#section-4-parent-container';
-a3.textContent = 'team';
+a3.href = '#section-10-parent-container';
+a3.textContent = 'product';
 li3.appendChild(a3)
 const li4 = document.createElement('li');
 const a4 = document.createElement('a');
-a4.href = '#section-6-parent-container';
-a4.textContent = 'contact';
+a4.href = '#section-8-parent-container';
+a4.textContent = 'tours';
 li4.appendChild(a4)
+
+const li5 = document.createElement('li');
+const a5 = document.createElement('a');
+a5.href = '#section-11-parent-container';
+a5.textContent = 'contact';
+li5.appendChild(a5)
+
 
 ul.appendChild(li1)
 ul.appendChild(li2)
 ul.appendChild(li3)
 ul.appendChild(li4)
+ul.appendChild(li5)
 
 menuButton.addEventListener('click',(event) => {
     
@@ -129,9 +137,6 @@ title.textContent = "connecting local coffee artisans with the world"
 wrapWordInSpan('coffee', 'artisans', title)
 // wrapWordInSpan('artisans', title)
 
-
-
-
 const p1 = document.createElement('p');
 p1.classList.add('paragraphs')
 p1.textContent = "we believe in sourcing the freshest, top grade and sustainable coffee beans";
@@ -143,7 +148,8 @@ p2.textContent = "Our mission is to provide the highest quality products to the 
 // wrapWordInSpan('Nutranation', paragraph)
 const anchorButton = document.createElement('a');
 anchorButton.classList.add('anchor-buttons')
-anchorButton.textContent = 'meet us';
+anchorButton.href = '#section-4-parent-container';
+anchorButton.textContent = 'Grab coffee with us';
 
 
 parentContainer.appendChild(imageWrapper)
