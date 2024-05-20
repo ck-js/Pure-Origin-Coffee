@@ -350,11 +350,12 @@ function section6Component() {
     const socialsContainer = document.createElement('div');
     socialsContainer.classList.add('socials-container');
     
-    createSocialMediaElement(lineImage,"https://www.google.com", "Chat using LINE",socialsContainer)
-    createSocialMediaElement(whatsappImage,"https://www.google.com", "Chat on Whatsapp",socialsContainer)
-    createSocialMediaElement(messengerImage,"https://www.google.com", "Chat on Messenger",socialsContainer)
+    createSocialMediaElement(lineImage,"https://line.me/ti/p/K6b7kw42yF", "Chat using LINE",socialsContainer)
+    createSocialMediaElement(whatsappImage,"https://wa.me/66842531557?text=I'm%20interested%20in%20your%20coffee%20for%20sale", "Chat on Whatsapp",socialsContainer)
+    createSocialMediaElement(messengerImage,"https://www.facebook.com/cliffton.kaewkarn", "Chat on Messenger",socialsContainer)
 
-    
+
+
     button.addEventListener('click', (event) => {
         
         if (button.textContent === 'Roast Us on socials  ↓') {
