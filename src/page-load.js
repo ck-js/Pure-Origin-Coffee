@@ -747,6 +747,8 @@ function createParagraphElement(text) {
 }
 function createEmailForm() {
     const form = document.createElement('form');
+    form.method = 'post';
+    form.action = '/api/submit';
     form.classList.add('mobile-forms');
     const emailLabel = document.createElement('label');
     emailLabel.htmlFor = 'email';
@@ -769,6 +771,8 @@ function createEmailForm() {
 }
 function createOrderForm() {
     const form = document.createElement('form');
+    form.method = 'post';
+    form.action = '/api/submit';
     form.classList.add('mobile-forms');
 
     const p1 = createParagraphElement("A coffee loving human will get back to you within 12 hours!")
